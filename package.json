@@ -1,0 +1,16 @@
+{
+  "name": "hof-template-partials",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "transpile": "hof-transpiler ./common/translations/src -s FIXME",
+    "postinstall": "npm run transpile"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "hof-transpiler": "0.0.6"
+  }
+}
