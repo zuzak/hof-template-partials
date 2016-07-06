@@ -2,10 +2,9 @@
   {{$header}}
     {{content.title}}
   {{/header}}
-
   {{$content}}
     <p>{{{content.message}}}</p>
-    <a href="/" class="button" role="button">Start again</a>
+    <a href="/" class="button" role="button">{{#t}}buttons.start-again{{/t}}</a>
     {{#showStack}}
       <pre>
         {{error.stack}}
