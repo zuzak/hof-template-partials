@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "transpile": "hof-transpiler ./common/translations/src -s FIXME",
+    "transpile": "hof-transpiler ./translations/src -s FIXME",
     "postinstall": "npm run transpile"
   },
   "keywords": [],
