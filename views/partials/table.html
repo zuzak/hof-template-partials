@@ -1,0 +1,18 @@
+<table>
+  <head>
+    <tr>
+      {{#headers}}
+        <th>{{.}}</th>
+      {{/headers}}
+    </tr>
+  </head>
+  <tbody>
+    {{#rows}}
+      <tr>
+        {{#.}}
+          <td>{{.}}</td>
+        {{/.}}
+      </tr>
+    {{/rows}}
+  </tbody>
+</table>

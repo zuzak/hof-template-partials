@@ -1,0 +1,48 @@
+{{<layout}}
+  {{$header}}
+    {{header}}
+  {{/header}}
+
+  {{$content}}
+    <p>{{intro}}</p>
+    {{#intro-list}}
+      {{> partials-bullet-list}}
+    {{/intro-list}}
+    {{#indent-intro}}
+      {{> partials-panel-indent}}
+    {{/indent-intro}}
+    {{#cookies-link}}
+      {{> partials-external-link}}
+    {{/cookies-link}}
+
+    <h2>{{intro-cookie}}</h2>
+    <p>{{intro-cookie-message}}</p>
+    {{#intro-cookie-table}}
+      {{> partials-table}}
+    {{/intro-cookie-table}}
+
+    <h2>{{measuring-use}}</h2>
+    {{#google-analytics}}
+      <p>{{.}}</p>
+    {{/google-analytics}}
+    {{#google-analytics-list}}
+      {{> partials-bullet-list}}
+    {{/google-analytics-list}}
+    <p>{{no-identify}}</p>
+    {{#analytics-table}}
+      {{> partials-table}}
+    {{/analytics-table}}
+    {{#indent-ga}}
+      {{> partials-panel-indent}}
+    {{/indent-ga}}
+    {{#opt-out-link}}
+      {{> partials-external-link}}
+    {{/opt-out-link}}
+
+    <h2>{{session-cookies}}</h2>
+    <p>{{session-cookies-content}}</p>
+    {{#session-cookies-table}}
+      {{> partials-table}}
+    {{/session-cookies-table}}
+  {{/content}}
+{{/layout}}

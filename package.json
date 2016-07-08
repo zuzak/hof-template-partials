@@ -1,0 +1,19 @@
+{
+  "name": "hof-template-partials",
+  "version": "1.0.0",
+  "description": "A collection of Mustache partials and i18n translations to be used in HOF applications",
+  "main": "index.js",
+  "scripts": {
+    "transpile": "hof-transpiler ./translations/src -s FIXME",
+    "postinstall": "npm run transpile"
+  },
+  "keywords": [],
+  "author": "UKHomeOffice",
+  "contributors": [
+    "Joe Fitter <joe@brightapp.io> (http://brightapp.io/)"
+  ],
+  "license": "GPLv2",
+  "dependencies": {
+    "hof-transpiler": "0.0.6"
+  }
+}
