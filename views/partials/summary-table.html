@@ -1,16 +1,14 @@
-{{^emptySection}}
-  <table class="table-details">
-    <thead>
-      <p>{{#t}}pages.confirm.table.headers.{{name}}{{/t}}</p>
-    </thead>
-    <tbody>
-      {{#fields}}
-        <tr>
-          <td>{{#t}}pages.confirm.table.headers.{{name}}{{/t}}</td>
-          <td data-value="{{origValue}}">{{{value}}}</td>
-          <td><a href="{{baseUrl}}{{step}}/edit#{{name}}" class="button" id="{{name}}-change">{{#t}}buttons.change{{/t}}</a></td>
-        </tr>
-      {{/fields}}
-    </tbody>
-  </table>
-{{/emptySection}}
+<table class="table-details">
+  <thead>
+    <p>{{section}}</p>
+  </thead>
+  <tbody>
+    {{#fields}}
+      <tr>
+        <td>{{label}}</td>
+        <td data-value="{{value}}">{{value}}</td>
+        <td><a href="{{baseUrl}}{{step}}/edit#{{field}}" class="button" id="{{field}}-change">{{#t}}buttons.change{{/t}}</a></td>
+      </tr>
+    {{/fields}}
+  </tbody>
+</table>
