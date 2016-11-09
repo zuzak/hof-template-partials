@@ -11,15 +11,11 @@
     {{> partials-navigation}}
   {{/propositionHeader}}
 
-  {{$header}}{{#t}}pages.{{section}}.header{{/t}}{{/header}}
+  {{$header}}{{title}}{{/header}}
   {{$content}}
     {{<partials-form}}
       {{$form}}
-        {{#subsection}}
-          <p class="form-block">
-            {{#t}}pages.{{subsection}}.header{{/t}}
-          </p>
-        {{/subsection}}
+        {{#intro}}<p class="form-block">{{intro}}</p>{{/intro}}
         {{$page-content}}{{/page-content}}
       {{/form}}
     {{/partials-form}}
