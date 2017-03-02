@@ -3,10 +3,6 @@
   "version": "3.2.0",
   "description": "A collection of Mustache partials and i18n translations to be used in HOF applications",
   "main": "index.js",
-  "scripts": {
-    "transpile": "hof-transpiler ./translations/src -s FIXME",
-    "postinstall": "npm run transpile"
-  },
   "keywords": [],
   "author": "UKHomeOffice",
   "contributors": [
@@ -14,7 +10,6 @@
   ],
   "license": "GPLv2",
   "dependencies": {
-    "hof-transpiler": "0.0.6",
     "lodash": "^4.17.4"
   }
 }
