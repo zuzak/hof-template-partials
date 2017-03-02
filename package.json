@@ -3,17 +3,20 @@
   "version": "3.3.1",
   "description": "A collection of Mustache partials and i18n translations to be used in HOF applications",
   "main": "index.js",
-  "scripts": {
-    "transpile": "hof-transpiler ./translations/src -s FIXME",
-    "postinstall": "npm run transpile"
-  },
   "keywords": [],
+  "scripts": {
+    "test": "eslint ."
+  },
   "author": "UKHomeOffice",
   "contributors": [
     "Joe Fitter <joe@brightapp.io> (http://brightapp.io/)"
   ],
   "license": "GPLv2",
   "dependencies": {
-    "hof-transpiler": "0.0.6"
+    "lodash": "^4.17.4"
+  },
+  "devDependencies": {
+    "eslint": "^3.16.1",
+    "eslint-config-homeoffice": "^2.1.2"
   }
 }

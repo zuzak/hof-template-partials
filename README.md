@@ -53,64 +53,23 @@ app.use(function (req, res, next) {
 
 ### Translations
 
-#### Standalone
+The provided translations are designed to be used in conjunction with a translations library such as [i18n-future](https://github.com/lennym/i18n-future).
 
-The provided translations are designed to be used in conjunction with a translations library such as [i18n-future](https://github.com/lennym/i18n-future). The source files are compiled automatically post-install. If you need to re-compile run the following:
+The exported `resources` method will return a compiled object containing the translations, which can be passed to an `i18n` instance as a pre-compiled resource.
 
-```bash
-$ npm run transpile
-```
-
-The compiled translations file can be found at `hof-template-partials/translations/{lang}/default.json.`
-
-To use with i18n-future:
-
-app.js
 ```js
-var i18n = require('i18n-future')({
-  path: require('hof-template-partials').translations
+const translate = require('i18n-future').middleware({
+  resources: require('hof-template-partials').resources()
 });
-
-i18n.on('ready', function () {
-  var lookedup = i18n.translate('key');
-});
+app.use(translate);
 ```
 
-#### HOF Application
+By default the namespace for this translation is `default`. A custom namespace can be specified by passing it as an argument to the `resources` function.
 
-The provided translations can be combined with your application shared and route specific translations by using [hof-transpiler](https://github.com/UKHomeOffice/hof-transpiler). You can run the following script:
-
-```bash
-$ npm install hof-transpiler
-$ ./node_modules/.bin/hof-transpiler path/to/translations/src -w --shared path/to/shared/translations/src --shared node_modules/hof-template-partials/translations/src
-```
-
-or add the following to `scripts` in `package.json`
-```json
-"scripts": {
-  "transpile": "hof-transpiler path/to/translations/src -w --shared path/to/shared/translations/src --shared node_modules/hof-template-partials/translations/src"
-}
-```
-
-and run with:
-
-```bash
-$ npm run transpile
-```
-
-This will extend from right to left so any duplicate keys will be overwritten by the left-most source.
-
-### Rendering Terms & Conditions and Cookies
-
-These templates are scoped to their respective translation files so you would render them in the following way:
-
-app.js
 ```js
-app.get('/terms', function (req, res, next) {
-  i18n.on('ready', function () {
-    // express will look for a terms.html template in the
-    // directories defined earlier
-    res.render('terms', i18n.translate('terms'))
-  });
+const translate = require('i18n-future').middleware({
+  resources: require('hof-template-partials').resources('hof-common'),
+  fallbackNamespace: 'hof-common'
 });
+app.use(translate);
 ```
