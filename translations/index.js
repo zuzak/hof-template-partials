@@ -2,7 +2,7 @@
 
 const path = require('path');
 const fs = require('fs');
-const _ = require('lodash')
+const _ = require('lodash');
 
 const langs = fs.readdirSync(path.resolve(__dirname, 'src'));
 
