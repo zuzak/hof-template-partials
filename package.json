@@ -1,6 +1,6 @@
 {
   "name": "hof-template-partials",
-  "version": "3.7.1",
+  "version": "3.7.2",
   "description": "A collection of Mustache partials and i18n translations to be used in HOF applications",
   "main": "index.js",
   "keywords": [],
