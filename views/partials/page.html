@@ -15,7 +15,9 @@
   {{$content}}
     {{<partials-form}}
       {{$form}}
-        {{#intro}}<p class="form-block">{{intro}}</p>{{/intro}}
+        {{$intro}}
+          {{#intro}}<p class="form-block">{{intro}}</p>{{/intro}}
+        {{/intro}}
         {{$page-content}}{{/page-content}}
       {{/form}}
     {{/partials-form}}
