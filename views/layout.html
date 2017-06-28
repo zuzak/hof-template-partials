@@ -25,6 +25,9 @@
       <script type="text/javascript" src="{{assetPath}}/js/bundle.js"></script>
     </main>
   {{/main}}
+  {{$cookieMessage}}
+    <p>GOV.UK uses cookies to make the site simpler. <a href="https://www.gov.uk/help/cookies">Find out more about cookies</a></p>
+  {{/cookieMessage}}
   {{$footerSupportLinks}}
     <ul>
       <li><a href="/cookies">{{#t}}base.cookies{{/t}}</a></li>
