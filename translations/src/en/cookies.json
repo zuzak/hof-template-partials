@@ -73,7 +73,7 @@
     "link": "opt out of Google Analytics cookies"
   },
   "session-cookies": "Session cookies",
-  "session-cookies-content": "We store session cookies on your computer to help keep your information secure while you use the service.",
+  "session-cookies-content": "Session cookies are downloaded each time you visit the service and deleted when you close your browser. They help the service to work properly.",
   "session-cookies-table": {
     "headers": [
       "Name",
