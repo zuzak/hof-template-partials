@@ -84,7 +84,17 @@
       [
         "hmbrp.sid",
         "Stores a session ID and temporarily stores data you enter to enable you to make an application",
-        "After 20 minutes of inactivity"
+        "When you close your browser"
+      ],
+      [
+        "hof-wizard-sc",
+        "Tells us when your session starts so we can tell you if it expires",
+        "When you close your browser"
+      ],
+      [
+        "hof-cookie-check",
+        "Tells us you have already allowed cookies so we don’t need to ask you again",
+        "When you close your browser"
       ]
     ]
   }
