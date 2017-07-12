@@ -25,6 +25,12 @@
       <script type="text/javascript" src="{{assetPath}}/js/bundle.js"></script>
     </main>
   {{/main}}
+  {{$cookieMessage}}
+    <p>
+      {{#t}}cookies.banner.message{{/t}}
+      <a href="https://www.gov.uk/help/cookies">{{#t}}cookies.banner.link{{/t}}</a>
+    </p>
+  {{/cookieMessage}}
   {{$footerSupportLinks}}
     <ul>
       <li><a href="/cookies">{{#t}}base.cookies{{/t}}</a></li>
