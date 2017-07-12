@@ -1,6 +1,6 @@
 {
   "banner": {
-    "begin": "GOV.UK uses cookies to make the site simpler.",
+    "message": "GOV.UK uses cookies to make the site simpler.",
     "link": "Find out more about cookies"
   },
   "header": "Cookies",
